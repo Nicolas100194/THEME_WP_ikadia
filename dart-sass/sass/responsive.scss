@@ -1,0 +1,14 @@
+$large : 1330px;
+$medium : 1150px;
+$very-medium : 995px;
+$small : 850px;
+$x-small : 600px;
+$very-small : 400px;
+
+$large-down : "only screen and (max-width: #{$large})";
+$medium-down : "only screen and (max-width: #{$medium})";
+$very-medium-down : "only screen and (max-width: #{$very-medium})";
+$small-down : "only screen and (max-width: #{$small})";
+$x-small-down : "only screen and (max-width: #{$x-small})";
+$very-small-down : "only screen and (max-width: #{$very-small})";
+
