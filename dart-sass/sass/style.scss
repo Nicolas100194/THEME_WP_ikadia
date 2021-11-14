@@ -239,7 +239,6 @@ a{
     font-family : 'Montserrat', sans-serif !important;
     .container-form{
         justify-content: center;
-        padding-top: 50px;
     }
     
     p:nth-child(-n+4){
@@ -317,6 +316,9 @@ a{
 }
 
 @media #{$very-medium-down}{
+    .container-form{
+        padding: 20px;
+    }
     .bloc-form{
         height: 750px;
         .top-bloc{
@@ -329,7 +331,7 @@ a{
             }
         }
         input, textarea{
-            width: 95%;
+            width: 100%;
         }
     }
 }
@@ -381,9 +383,6 @@ a{
                 margin-bottom: 50px;
             }
         }
-    }
-    .container-form{
-        width: 50%;
     }
     .bloc-form{
         height: 700px;

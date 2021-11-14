@@ -235,7 +235,6 @@ a {
 }
 .bloc-form .container-form {
   justify-content: center;
-  padding-top: 50px;
 }
 .bloc-form p:nth-child(-n+4) {
   display: inline;
@@ -297,6 +296,10 @@ a {
   }
 }
 @media only screen and (max-width: 995px) {
+  .container-form {
+    padding: 20px;
+  }
+
   .bloc-form {
     height: 750px;
   }
@@ -310,7 +313,7 @@ a {
     top: 15%;
   }
   .bloc-form input, .bloc-form textarea {
-    width: 95%;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 850px) {
@@ -363,10 +366,6 @@ a {
   }
   .wrapper .card-wrapper:first-of-type {
     margin-bottom: 50px;
-  }
-
-  .container-form {
-    width: 50%;
   }
 
   .bloc-form {
