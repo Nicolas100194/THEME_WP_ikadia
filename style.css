@@ -4,7 +4,7 @@
 }
 
 html, body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 100%;
   scroll-behavior: smooth;
 }
@@ -30,10 +30,11 @@ a {
 .content-header h1 {
   color: white;
   font-size: 152px;
+  text-align: center;
 }
 .content-header h2 {
   color: #10749e;
-  letter-spacing: 22px;
+  letter-spacing: 18px;
   font-weight: 200;
   font-size: 24px;
   text-align: center;
@@ -61,20 +62,9 @@ a {
   animation-iteration-count: infinite;
 }
 
-@keyframes scroll_anim {
-  0% {
-    top: 30%;
-  }
-  50% {
-    top: 70%;
-  }
-  100% {
-    top: 30%;
-  }
-}
 .bloc-content {
   position: relative;
-  background-color: #11749e;
+  background-color: #10749e;
   height: 739px;
 }
 
@@ -163,7 +153,7 @@ a {
   transition: 0.5s;
 }
 .container-article ul {
-  margin-top: 6px;
+  margin-top: 5px;
 }
 .container-article .content {
   display: flex;
@@ -223,7 +213,7 @@ a {
   height: auto;
   padding-top: 5%;
   padding-bottom: 5%;
-  background-color: #11749e;
+  background-color: #10749e;
   display: flex;
   align-items: center;
 }
@@ -247,7 +237,7 @@ a {
 
 .bloc-form {
   position: relative;
-  padding-top: 25%;
+  padding-top: 20%;
   background: center center/cover no-repeat url("img/background_form.png");
 }
 .bloc-form .container-form {
@@ -264,7 +254,7 @@ a {
   height: 48px;
   border: solid 1px white;
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .bloc-form #name-form, .bloc-form #email-form {
   margin-right: 10px;
@@ -279,10 +269,10 @@ a {
   padding-left: 15px;
   padding-top: 15px;
   padding-right: 15px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .bloc-form .wpcf7-submit {
-  background-color: #11749e;
+  background-color: #10749e;
   border: none;
   font-weight: bold;
   width: 227px;
@@ -304,6 +294,10 @@ a {
 @media only screen and (max-width: 1330px) {
   .container-article .content:first-of-type {
     padding: 5%;
+  }
+
+  .bloc-form {
+    padding-top: 30%;
   }
 }
 @media only screen and (max-width: 1220px) {
@@ -432,6 +426,17 @@ a {
 
   .bloc-content {
     padding-top: 60%;
+  }
+}
+@keyframes scroll_anim {
+  0% {
+    top: 30%;
+  }
+  50% {
+    top: 70%;
+  }
+  100% {
+    top: 30%;
   }
 }
 
