@@ -39,6 +39,7 @@ a{
         color: $white-color;
         font-size: 152px;
         text-align: center;
+        animation: apparition_title 1s ease-out;
     }
     h2{
         color: $primary-color;
@@ -120,6 +121,12 @@ a{
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
+    &:hover{
+        animation-duration: .3s;
+        animation-name: survol;
+        animation-timing-function: linear;
+        transform: translateY(-2%);
+    }
     .logo-card{
         position: relative;
         border-radius: 50%;
@@ -297,6 +304,10 @@ a{
         margin-top: 20px;
         text-transform: uppercase;
         padding-left: 0;
+        cursor: pointer;
+        &:hover{
+            opacity: .8;
+        }
     }
     .wpcf7-response-output{
         background-color: red!important;
@@ -464,6 +475,17 @@ a{
 
 //ANIMATION
 
+@keyframes apparition_title {
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 @keyframes scroll_anim{
     0%{
         top: 30%;
@@ -473,6 +495,15 @@ a{
     }
     100%{
         top: 30%;
+    }
+}
+
+@keyframes survol{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-2%);
     }
 }
 

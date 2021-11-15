@@ -1,4 +1,3 @@
-alert('coucou')
 const ratio = .1
 const options = {
     root: null,
