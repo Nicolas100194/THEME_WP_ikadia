@@ -158,6 +158,10 @@ a {
   left: 0;
   right: 0;
 }
+.container-article .view-more:hover {
+  background-color: rgba(34, 34, 34, 0.3);
+  transition: 0.5s;
+}
 .container-article ul {
   margin-top: 6px;
 }

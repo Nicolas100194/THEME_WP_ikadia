@@ -159,6 +159,10 @@ a{
         top: 0;
         left: 0;
         right: 0;
+        &:hover{
+            background-color: rgba(34, 34, 34, 0.3);
+            transition: .5s;
+        }
     }
     ul{
         margin-top: 6px;
