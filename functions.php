@@ -12,7 +12,7 @@ function theme_ikadia_register_assets(){
     wp_enqueue_style('css', get_stylesheet_uri(), array(), $lastmodtime);
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js');
-    wp_enqueue_script('javascript', get_template_directory_uri(). '/app.js', array(), null, true);
+    wp_enqueue_script('javascript', get_template_directory_uri() . '/app.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'theme_ikadia_register_assets');
 

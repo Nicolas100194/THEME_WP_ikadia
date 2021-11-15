@@ -11,7 +11,7 @@
         </a>
     </div>
 </div>
-<div id="link"class="bloc-content">
+<div id="link"class="bloc-content reveal">
     <div class="top-bloc">
         <p class="big-letter">W</p>
         <h3>we are an awesome agency</h3>
@@ -50,7 +50,7 @@ $count_post = 0;
 while($posts->have_posts()): $posts->the_post();
     $count_post ++;
     if ($count_post == 1):?>
-        <div class="container-article first-article">
+        <div class="container-article first-article reveal">
             <a class="view-more"href="<?php the_permalink()?>">
                 <div class="content">
                     <div class="infos-article">
@@ -67,7 +67,7 @@ while($posts->have_posts()): $posts->the_post();
             </a>
         </div>      
     <?php else :?>
-        <div class="container-article second-article">
+        <div class="container-article second-article reveal">
         <a class="view-more"href="<?php the_permalink()?>">
                 <div class="content">
                     <div class="infos-article">
@@ -86,7 +86,7 @@ while($posts->have_posts()): $posts->the_post();
     <?php endif;?>
 <?php endwhile ;?>
 
-<div class="wrapper">
+<div class="wrapper reveal">
     <div class="container">
         <div class="card-wrapper">
             <img src="/wp_ikadia/wp-content/themes/theme_ikadia/img/Write2.png" alt="iconecrayon">
@@ -103,7 +103,7 @@ while($posts->have_posts()): $posts->the_post();
     </div>
 </div>
 
-<div class="bloc-form">
+<div class="bloc-form reveal">
     <div class="top-bloc">
         <p class="big-letter">C</p>
         <h3>we'd love to hear about your project</h3>
