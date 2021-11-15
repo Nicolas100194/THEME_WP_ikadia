@@ -152,6 +152,17 @@ a{
 .container-article{
     display: flex;
     height: 500px;
+    position: relative;
+    .view-more{
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    ul{
+        margin-top: 6px;
+    }
     .content{
         display: flex;
         flex-direction: column;
@@ -161,17 +172,11 @@ a{
         max-width: 50%;
         padding-left: 20px;
         padding-right: 20px;
-        &:first-of-type{
+        &:nth-of-type(1){
             padding-left: 15%;
             padding-right: 150px;
             background-color: rgb(34, 34, 34);
             color: white;
-        }
-        &:last-of-type{
-            padding-left: 150px;
-            padding-right: 15%;
-            background-color: rgb(243, 243, 243);
-            
         }
         .infos-article{
             display: flex;
@@ -206,6 +211,16 @@ a{
     }
 }
 
+.second-article{
+    .content:nth-of-type(1){
+        order: 2;
+        padding-left: 150px;
+        padding-right: 15%;
+        background-color: rgb(243, 243, 243);
+        color: rgb(34, 34, 34);
+    }
+}
+
 .wrapper{
     height: auto;
     padding-top: 5%;
@@ -234,25 +249,27 @@ a{
 
 .bloc-form{
     position: relative;
-    height: 898px;
+    padding-top: 25%;
     background: center center / cover no-repeat url("img/background_form.png");
-    font-family : 'Montserrat', sans-serif !important;
     .container-form{
         justify-content: center;
     }
-    
     p:nth-child(-n+4){
         display: inline;
     }
-    p:nth-child(-n+3){
-        margin-right: 20px;
-    }
+    
     input{
+        box-sizing: border-box;
         margin-bottom: 20px;
+        padding-left: 15px;
         background: none;
         height: 48px;
         border: solid 1px white;
         color: white;
+        font-family : 'Montserrat', sans-serif ;
+    }
+    #name-form, #email-form{
+        margin-right: 10px;
     }
     textarea{
         box-sizing: border-box;
@@ -264,10 +281,12 @@ a{
         padding-left: 15px;
         padding-top: 15px;
         padding-right: 15px;
+        font-family : 'Montserrat', sans-serif ;
     }
     .wpcf7-submit{
         background-color: rgb(17,116,158);
         border: none;
+        font-weight: bold;
         width: 227px;
         height: 64px;
         display: block;
@@ -276,18 +295,21 @@ a{
         text-transform: uppercase;
         padding-left: 0;
     }
+    .wpcf7-response-output{
+        background-color: red!important;
+        padding: 10px!important;
+        text-align: center!important;
+        color: white!important;
+        border: none!important;
+    }
 }
 
 @media #{$large-down}{
     .container-article{
-        .content:last-of-type{
-            padding: 5%;
-        }
         .content:first-of-type{
             padding: 5%;
         }
     }
-    
 }
 
 @media #{$medium-down}{
@@ -310,17 +332,22 @@ a{
             img{
                 height: 30px;
             }
+        }   
+    }
+    .container-form{
+        padding: 20px;
+    }
+
+    .bloc-form{
+        input, textarea{
+            width: 100%;
         }
-        
     }
 }
 
 @media #{$very-medium-down}{
-    .container-form{
-        padding: 20px;
-    }
     .bloc-form{
-        height: 750px;
+        
         .top-bloc{
             height: 25%;
             p{
@@ -330,9 +357,7 @@ a{
                 top: 15%;
             }
         }
-        input, textarea{
-            width: 100%;
-        }
+        
     }
 }
 
@@ -340,6 +365,7 @@ a{
     .bloc-content{
         height: auto;
         padding-top: 30%;
+        padding-bottom: 10%;
     }
     .top-bloc{
         height: 15%;
@@ -373,9 +399,14 @@ a{
         .content{
             width: 100%;
             max-width: 100%;
+            &:nth-of-type(1){
+                order: 1;
+            }
         }
     }
     .wrapper{
+        padding-top: 15%;
+        padding-bottom: 15%;
         .card-wrapper{
             width: 90%;
             padding: 0;
@@ -383,9 +414,6 @@ a{
                 margin-bottom: 50px;
             }
         }
-    }
-    .bloc-form{
-        height: 700px;
     }
     .bloc-form{
         input,textarea{
@@ -408,6 +436,7 @@ a{
         padding-top: 40%;
     }
     .bloc-form{
+        padding-top: 50%;
         p:nth-child(-n+3){
             margin-right: 0;
         }

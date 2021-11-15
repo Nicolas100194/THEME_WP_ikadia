@@ -149,6 +149,17 @@ a {
 .container-article {
   display: flex;
   height: 500px;
+  position: relative;
+}
+.container-article .view-more {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.container-article ul {
+  margin-top: 6px;
 }
 .container-article .content {
   display: flex;
@@ -160,16 +171,11 @@ a {
   padding-left: 20px;
   padding-right: 20px;
 }
-.container-article .content:first-of-type {
+.container-article .content:nth-of-type(1) {
   padding-left: 15%;
   padding-right: 150px;
   background-color: #222222;
   color: white;
-}
-.container-article .content:last-of-type {
-  padding-left: 150px;
-  padding-right: 15%;
-  background-color: #f3f3f3;
 }
 .container-article .content .infos-article {
   display: flex;
@@ -201,6 +207,14 @@ a {
   object-position: top;
 }
 
+.second-article .content:nth-of-type(1) {
+  order: 2;
+  padding-left: 150px;
+  padding-right: 15%;
+  background-color: #f3f3f3;
+  color: #222222;
+}
+
 .wrapper {
   height: auto;
   padding-top: 5%;
@@ -229,9 +243,8 @@ a {
 
 .bloc-form {
   position: relative;
-  height: 898px;
+  padding-top: 25%;
   background: center center/cover no-repeat url("img/background_form.png");
-  font-family: "Montserrat", sans-serif !important;
 }
 .bloc-form .container-form {
   justify-content: center;
@@ -239,15 +252,18 @@ a {
 .bloc-form p:nth-child(-n+4) {
   display: inline;
 }
-.bloc-form p:nth-child(-n+3) {
-  margin-right: 20px;
-}
 .bloc-form input {
+  box-sizing: border-box;
   margin-bottom: 20px;
+  padding-left: 15px;
   background: none;
   height: 48px;
   border: solid 1px white;
   color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.bloc-form #name-form, .bloc-form #email-form {
+  margin-right: 10px;
 }
 .bloc-form textarea {
   box-sizing: border-box;
@@ -259,10 +275,12 @@ a {
   padding-left: 15px;
   padding-top: 15px;
   padding-right: 15px;
+  font-family: "Montserrat", sans-serif;
 }
 .bloc-form .wpcf7-submit {
   background-color: #11749e;
   border: none;
+  font-weight: bold;
   width: 227px;
   height: 64px;
   display: block;
@@ -271,16 +289,20 @@ a {
   text-transform: uppercase;
   padding-left: 0;
 }
+.bloc-form .wpcf7-response-output {
+  background-color: red !important;
+  padding: 10px !important;
+  text-align: center !important;
+  color: white !important;
+  border: none !important;
+}
 
 @media only screen and (max-width: 1330px) {
-  .container-article .content:last-of-type {
-    padding: 5%;
-  }
   .container-article .content:first-of-type {
     padding: 5%;
   }
 }
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1220px) {
   .content-header h1 {
     font-size: 70px;
     text-align: center;
@@ -294,15 +316,16 @@ a {
   .wrapper .container img {
     height: 30px;
   }
-}
-@media only screen and (max-width: 995px) {
+
   .container-form {
     padding: 20px;
   }
 
-  .bloc-form {
-    height: 750px;
+  .bloc-form input, .bloc-form textarea {
+    width: 100%;
   }
+}
+@media only screen and (max-width: 995px) {
   .bloc-form .top-bloc {
     height: 25%;
   }
@@ -312,14 +335,12 @@ a {
   .bloc-form .top-bloc h3 {
     top: 15%;
   }
-  .bloc-form input, .bloc-form textarea {
-    width: 100%;
-  }
 }
 @media only screen and (max-width: 850px) {
   .bloc-content {
     height: auto;
     padding-top: 30%;
+    padding-bottom: 10%;
   }
 
   .top-bloc {
@@ -359,17 +380,20 @@ a {
     width: 100%;
     max-width: 100%;
   }
+  .container-article .content:nth-of-type(1) {
+    order: 1;
+  }
 
+  .wrapper {
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
   .wrapper .card-wrapper {
     width: 90%;
     padding: 0;
   }
   .wrapper .card-wrapper:first-of-type {
     margin-bottom: 50px;
-  }
-
-  .bloc-form {
-    height: 700px;
   }
 
   .bloc-form input, .bloc-form textarea {
@@ -389,6 +413,9 @@ a {
     padding-top: 40%;
   }
 
+  .bloc-form {
+    padding-top: 50%;
+  }
   .bloc-form p:nth-child(-n+3) {
     margin-right: 0;
   }

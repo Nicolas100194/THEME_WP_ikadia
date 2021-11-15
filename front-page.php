@@ -51,33 +51,37 @@ while($posts->have_posts()): $posts->the_post();
     $count_post ++;
     if ($count_post == 1):?>
         <div class="container-article first-article">
-            <div class="content">
-                <div class="infos-article">
-                <?= the_category() ?>
-                <p>&nbsp|
-                <?= get_the_date();?></p>
+            <a class="view-more"href="<?php the_permalink()?>">
+                <div class="content">
+                    <div class="infos-article">
+                    <?= the_category() ?>
+                    <p>&nbsp|
+                    <?= get_the_date();?></p>
+                    </div>
+                    <h4><?php the_title()?></h4>
+                    <?= the_excerpt() ?>
                 </div>
-                <h4><?php the_title()?></h4>
-                <?= the_excerpt() ?>
-            </div>
-            <div class="thumbnail">
-                <?php the_post_thumbnail()?>
-            </div>
+                <div class="thumbnail">
+                    <?php the_post_thumbnail()?>
+                </div>
+            </a>
         </div>      
     <?php else :?>
         <div class="container-article second-article">
-            <div class="thumbnail">
-                <?php the_post_thumbnail()?>
-            </div>
-            <div class="content">
-            <div class="infos-article">
-                <?= the_category() ?>
-                <p>&nbsp|
-                <?= get_the_date();?></p>
+        <a class="view-more"href="<?php the_permalink()?>">
+                <div class="content">
+                    <div class="infos-article">
+                    <?= the_category() ?>
+                    <p>&nbsp|
+                    <?= get_the_date();?></p>
+                    </div>
+                    <h4><?php the_title()?></h4>
+                    <?= the_excerpt() ?>
                 </div>
-                <h4><?php the_title()?></h4>
-                <?= the_excerpt() ?>
-            </div>
+                <div class="thumbnail">
+                    <?php the_post_thumbnail()?>
+                </div>
+            </a>
         </div>
     <?php endif;?>
 <?php endwhile ;?>
